@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Colores</title>
+</head>
+<body>
+    <div id="caja1" style="background-color: blue; width:200px; height:100px;"></div>
+    <br>
+    <div id="caja2" style="background-color: red; width:200px; height:100px;"></div>
+    <br>
+    <div id="caja3" style="background-color: green; width:200px; height:100px;"></div>
+    <br>
+    <div id="caja4" style="background-color: yellow; width:200px; height:100px;"></div>
+    <br>
+
+    <script>
+        function aNegro(){
+            if (this.style.backgroundColor === 'black'){
+                if(this.id === 'caja1'){
+                    this.style.backgroundColor = 'blue'
+                }
+                if(this.id === 'caja2'){
+                    this.style.backgroundColor = 'red'
+                }
+                if(this.id === 'caja3'){
+                    this.style.backgroundColor = 'green'
+                }
+                if(this.id === 'caja4'){
+                    this.style.backgroundColor = 'yellow'
+                }
+            }else{
+                this.style.backgroundColor = 'black'
+            }
+        }
+        const caja1 = document.getElementById("caja1")
+        const caja3 = document.getElementById("caja2")
+        const caja2 = document.getElementById("caja3")
+        const caja4 = document.getElementById("caja4")
+        caja1.addEventListener("click", aNegro);
+        caja2.addEventListener("click", aNegro);
+        caja3.addEventListener("click", aNegro);
+        caja4.addEventListener("click", aNegro);
+    </script>
+</body>
+</html>
